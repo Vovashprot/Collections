@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Service {
     public static List<Integer> isOdd(List<Integer> input){
@@ -28,5 +25,18 @@ public class Service {
                 output.add(input.get(i));
         }
         return output;
+    }
+
+    public static Map<String,Integer> uniqueWordsAndCountedRepeats(List<String> input){
+        Map<String, Integer> repeats = new HashMap<>();
+        for (int i = 0; i < input.size(); i++){
+            if (repeats.containsKey(input.get(i))){
+                repeats.put(input.get(i),repeats.get(input.get(i))+1);
+            }
+            else{
+                repeats.put(input.get(i), 1);
+            }
+        }
+        return repeats;
     }
 }

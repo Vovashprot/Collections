@@ -8,5 +8,6 @@ public class Main {
         System.out.println(Service.isOdd(dudes));
         System.out.println(Service.isEvenAndIncr(dudes));
         System.out.println(Service.uniqueWords(words));
+        System.out.println(Service.uniqueWordsAndCountedRepeats(words));
     }
 }
