@@ -27,7 +27,7 @@ public class Service {
         return output;
     }
 
-    public static Map<String,Integer> uniqueWordsAndCountedRepeats(List<String> input){
+    public static Collection<Integer> uniqueWordsAndCountedRepeats(List<String> input){
         Map<String, Integer> repeats = new HashMap<>();
         for (int i = 0; i < input.size(); i++){
             if (repeats.containsKey(input.get(i))){
@@ -37,6 +37,6 @@ public class Service {
                 repeats.put(input.get(i), 1);
             }
         }
-        return repeats;
+        return repeats.values();
     }
 }
