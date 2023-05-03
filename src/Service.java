@@ -34,7 +34,7 @@ public class Service {
                 repeats.put(input.get(i),repeats.get(input.get(i))+1);
             }
             else{
-                repeats.put(input.get(i), 1);
+                repeats.put(input.get(i), 0);
             }
         }
         return repeats.values();
